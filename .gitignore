@@ -1,0 +1,7 @@
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+node_modules/
+.jshintrc
