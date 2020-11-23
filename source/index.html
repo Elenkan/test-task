@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
-  <title>Automation Tool</title>
+  <title>Afrianska</title>
 </head>
 
 <body>
   <header class="page-header">
     <img class="site-logo" src="img/logo.svg" alt="Company's logo" width="48" height="32">
     <nav class="page-nav">
+      <button class="page-nav__button" type="button">
+        <img src="img/burger-button.svg" alt="" class="page-nav__img" width="24" height="16">
+      </button>
       <ul>
         <li><a href="" title=""></a></li>
         <li><a href="" title=""></a></li>
@@ -21,63 +24,79 @@
   </header>
   <main>
     <section class="advert-block">
+      <div class="advert-block__wrap">
       <h2 class="advert-block__title">New Automation Tool for Your Home</h2>
       <p class="advert-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.</p>
       <button class="advert-block__button">See Our Project</button>
+      </div>
     </section>
     <section class="services">
-      <h2 class="services__title">What we do to help our client grow in digital era,</h2>
+      <h2 class="services__title main-title">What we do to help our client grow in digital era,</h2>
       <div class="services-list">
         <article class="services-list__item">
-          <img class="services-list__img" src="#" alt="">
+          <div class="services-list__img">
+            <img src="../img/internet-service.svg" alt="" width="182" height="132">
+          </div>
+          <h3 class="services-list__title">Make Your business To Be Better Famous In Internet</h3>
+          <p class="services-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <a href="#" class="services-list__link">Learn more</a>
+        </article>
+        <div class="services-list__item-wrap">
+          <article class="services-list__item">
+            <div class="services-list__img">
+          <img src="../img/technology-home.svg" alt="" width="140" height="137">
+         </div>
           <h3 class="services-list__title">Bring Technology To Your Comfrotable Home</h3>
           <p class="services-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a href="#" class="services-list__link">Learn more</a>
         </article>
         <article class="services-list__item">
-          <img class="services-list__img" src="#" alt="">
-          <h3 class="services-list__title">Make Your business To Be Better Famous In Internet</h3>
-          <p class="services-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <a href="#" class="services-list__link">Learn more</a>
-        </article>
-        <article class="services-list__item">
-          <img class="services-list__img" src="#" alt="">
+          <div class="services-list__img">
+          <img src="../img/digital-product.svg" alt="" width="156" height="131"></div>
           <h3 class="services-list__title">Build Your Digital Product That Suitable For Your Need</h3>
           <p class="services-list__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           <a href="#" class="services-list__link">Learn more</a>
         </article>
+        </div>
       </div>
     </section>
     <section class="clients">
-      <h2 class="clients__title">Our Beloved Client</h2>
+      <h2 class="clients__title main-title">Our Beloved Client</h2>
       <p class="clients__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       <ul class="clients-list">
         <li class="clients-list__item"><a href="" class="clients-list__link">
+            <span class="clients-list__title">Logo Client 1</span>
             <img src="#" alt="" class="clients-list__logo">
           </a>
         </li>
         <li class="clients-list__item"><a href="" class="clients-list__link">
-            <img src="#" alt="" class="clients-list__logo">
+            <span class="clients-list__title">Logo Client 2</span>
+            <img src="#" alt="" class="clients-list__logo" width="235" height="128">
           </a>
         </li>
         <li class="clients-list__item"><a href="" class="clients-list__link">
-            <img src="#" alt="" class="clients-list__logo">
+            <span class="clients-list__title">Logo Client 3</span>
+            <img src="#" alt="" class="clients-list__logo" width="235" height="128">
           </a>
         </li>
         <li class="clients-list__item"><a href="" class="clients-list__link">
-            <img src="#" alt="" class="clients-list__logo">
+            <span class="clients-list__title">Logo Client 4</span>
+            <img src="#" alt="" class="clients-list__logo" width="235" height="128">
           </a>
         </li>
         <li class="clients-list__item"><a href="" class="clients-list__link">
-            <img src="#" alt="" class="clients-list__logo">
+            <span class="clients-list__title">Logo Client 5</span>
+            <img src="#" alt="" class="clients-list__logo" width="235" height="128">
           </a>
         </li>
         <li class="clients-list__item"><a href="" class="clients-list__link">
-            <img src="#" alt="" class="clients-list__logo">
+            <span class="clients-list__title">Logo Client 6</span>
+            <img src="#" alt="" class="clients-list__logo" width="235" height="128">
           </a>
         </li>
         <li class="clients-list__item"><a href="" class="clients-list__link">
-            <img src="#" alt="" class="clients-list__logo">
+            <span class="clients-list__title">Logo Client 7</span>
+            <img src="#" alt="" class="clients-list__logo" width="235" height="128">
           </a>
         </li>
       </ul>
@@ -86,8 +105,7 @@
   </main>
   <footer class="page-footer">
     <div class="vacancy">
-      <h2 class="vacancy__title">Intersted to woek
-        with our team?</h2>
+      <h2 class="vacancy__title main-title">Interested to work with our team?</h2>
       <p class="vacancy__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
       <button class="vacancy__button">Let's Talk</button>
     </div>
@@ -99,7 +117,11 @@
       <li class="contacts-list__item">
         <span class="contacts-list__letter">A.</span>
         <address class="contacts-list__address">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</address>
+      </li>
+      <li class="contacts-list__item"><span class="contacts-list__letter">T.</span>
         <a href="tel:+6281273134321" class="contacts-list__tel">+62-812-7313-4321</a>
+      </li>
+      <li class="contacts-list__item"><span class="contacts-list__letter">E.</span>
         <a href="mailto:hello.afrian@gmail.com" class="contacts-list__email"></a>
       </li>
     </ul>
