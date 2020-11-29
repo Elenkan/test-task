@@ -1,8 +1,8 @@
 body {
   display: block;
-
-  font-weight: 700;
-  font-family: @font-thin;
+  letter-spacing: 0.05em;
+  font-family: @font-regular;
+  min-width: 360px;
 }
 
 img {
@@ -19,7 +19,6 @@ img {
 button {
   padding: 0;
 
-  font-weight: inherit;
   font-family: inherit;
 
   background-color: transparent;
@@ -38,9 +37,14 @@ a {
   text-decoration: none;
 }
 
+
 .main-title {
   font-size: 36px;
   line-height: 46px;
-  font-family: @font-regular;
+  font-family: @font-semibold;
   color: @white-color;
+}
+
+.hidden {
+  display: none;
 }

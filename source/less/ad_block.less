@@ -2,40 +2,41 @@
   position: relative;
   z-index: 10;
 
-  padding: 0 calc(50% - 683px);
+  padding: 0 calc(50% - 660px);
+  padding-bottom: 193px;
 
-  &::before {
-    content: "";
-
-    display: block;
-    width: 1366px;
-    height: 768px;
-
-    background-image: url("../img/advert-bg.png");
-    background-repeat: no-repeat;
-    background-position: -67px -88px;
-  }
+  background: linear-gradient(to top, rgba(152, 195, 232, 0.2), #ffffff);
 }
 
 .advert-block__wrap {
-  position: absolute;
-  bottom: 278px;
-  left: 40px;
+  position: relative;
 
-  padding: 0 calc(50% - 508px);
+  padding: 0 calc(50% - 468px);
 
-  background-position: -67px -100px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: -40px;
+    left: 631px;
+
+    display: block;
+    width: 53%;
+    height: 624px;
+
+    background-image: url("../img/illustration.svg");
+    background-repeat: no-repeat;
+  }
 }
 
 .advert-block__title {
-  width: 510px;
+  width: 502px;
   margin-bottom: 41px;
-  padding-top: 24px;
+  padding-top: 58px;
 
-  font-size: 64px;
-  line-height: 74px;
-  font-family: @font-galien;
+  font-size: 50px;
+  line-height: 68px;
   color: @blue-color;
+  letter-spacing: 0.04em;
 }
 
 .advert-block__text {
@@ -53,9 +54,74 @@
   width: 220px;
   height: 56px;
 
+  font-family: @font-regular;
   color: @white-color;
+  letter-spacing: 0.04em;
 
-  background-color: #5a98d0;
+  background-color: @blue-background;
   border-radius: 10px;
   box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1319px) {
+  .advert-block {
+    padding: 0 calc(50% - 384px);
+    padding-bottom: 218px;
+  }
+
+  .advert-block__wrap {
+    padding: 0 calc(50% - 255px);
+
+    &::before {
+      top: 135px;
+      left: 196px;
+
+      width: 92%;
+
+      transform: scale(0.6);
+    }
+  }
+
+  .advert-block__text {
+    margin-bottom: 54px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .advert-block {
+    padding: 0 calc(50% - 180px);
+    padding-bottom: 218px;
+  }
+
+  .advert-block__wrap {
+    display: flex;
+    flex-direction: column;
+    padding: 0 calc(50% - 160px);
+
+    &::before {
+      display: none;
+      //       transform: scale(0.6);
+      // left: 196px;
+      // width: 92%;
+      // top: 135px;
+    }
+  }
+
+  .advert-block__title {
+    width: 320px;
+
+    font-size: 40px;
+  }
+
+  .advert-block__text {
+    width: 320px;
+  }
+
+  .advert-block__button {
+    align-self: center;
+  }
+
+  .advert-block__text {
+    margin-bottom: 54px;
+  }
 }

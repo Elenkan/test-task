@@ -5,14 +5,12 @@
   padding: 0 calc(50% - 470px);
 }
 .services__title {
-  position: absolute;
-  top: 73px;
+  position: relative;
+  top: 158px;
+  left: 211px;
 
   width: 358px;
 
-  font-size: 36px;
-  line-height: 46px;
-  font-family: @font-regular;
   color: #316099;
 }
 
@@ -21,18 +19,17 @@
   justify-content: space-between;
   width: 860px;
   margin-left: 80px;
-  padding-top: 105px;
+  padding-top: 191px;
 
   & > article {
     align-self: center;
-    margin-top: -128px;
+    margin-top: -130px;
     margin-bottom: 0;
   }
 }
 .services-list__item {
-  display: flex;
+  .flex();
   flex-direction: column;
-  flex-wrap: wrap;
   align-items: center;
   width: 380px;
   margin-bottom: 99px;
@@ -50,13 +47,12 @@
   padding-top: 46px;
 }
 .services-list__title {
-  width: 259px;
+  width: 284px;
   margin-bottom: 0;
-  margin-left: -19px;
 
   font-size: 20px;
   line-height: 30px;
-  font-family: @font-regular;
+  font-family: @font-semibold;
   color: @blue-color;
 }
 .services-list__description {
@@ -71,14 +67,14 @@
 }
 .services-list__link {
   position: relative;
-  bottom: 3px;
-  left: 51px;
+  bottom: 4px;
+  left: 49px;
 
   align-self: flex-start;
 
   font-size: 14px;
   line-height: 30px;
-  font-family: @font-regular;
+  font-family: @font-semibold;
   color: #5a98d0;
   text-decoration: none;
 }
@@ -109,4 +105,69 @@
   height: 10px;
 
   border-bottom: 2px solid #5a98d0;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1319px) {
+  .services {
+    margin-bottom: 70px;
+    padding: 0 calc(50% - 384px);
+  }
+  .services__title {
+    top: 78px;
+    left: 48px;
+  }
+
+  .services-list {
+    width: 768px;
+    margin-left: 0;
+    padding: 0 calc(50% - 358px);
+    padding-top: 105px;
+  }
+  .services-list__item {
+    width: 338px;
+    margin-bottom: 29px;
+  }
+  .services-list__img {
+    width: 182px;
+    height: 132px;
+    margin-bottom: 82px;
+    margin-left: 52px;
+    padding-top: 46px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .services {
+    margin-bottom: 70px;
+    padding: 0 calc(50% - 180px);
+  }
+  .services__title {
+    top: 10px;
+    left: 48px;
+
+    width: 320px;
+    margin-bottom: 70px;
+  }
+
+  .services-list {
+    flex-wrap: wrap;
+    width: 340px;
+    margin-left: 0;
+    padding: 0 calc(50% - 180px);
+    padding-top: 105px;
+
+    & > article {
+      margin-bottom: 29px;
+    }
+  }
+  .services-list__item {
+    width: 320px;
+    margin-bottom: 29px;
+  }
+  .services-list__img {
+    width: 182px;
+    height: 132px;
+    margin-bottom: 82px;
+    margin-left: 52px;
+    padding-top: 46px;
+  }
 }

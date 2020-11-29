@@ -1,78 +1,399 @@
 .page-footer {
-  display: flex;
-  padding: 0 calc(50% - 470px);
+  position: relative;
+
+  width: 93%;
 
   font-size: 16px;
   line-height: 26px;
   color: @white-color;
 
-  background-color: #316099;
+  background-color: @footer-background;
   border-radius: 0 200px 0 0;
 }
 
+.vacancy {
+  position: relative;
+
+  .flex();
+  margin-bottom: 161px;
+  padding: 0 calc(50% - 422px);
+  padding-top: 60px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 391px;
+    right: 197px;
+
+    display: block;
+    width: 1073px;
+
+    border-bottom: 1px solid @white-color;
+  }
+}
+
 .vacancy__title {
-  width: 460px;
+  width: 317px;
+  margin-bottom: 16px;
 }
 
 .vacancy__text {
+  order: 2;
   width: 460px;
 
-  font-size: 16px;
-  line-height: 26px;
   color: @white-color;
 
   opacity: 0.6;
 }
+
 .vacancy__button {
+  position: relative;
+  top: 106px;
+  left: 17px;
+
   width: 220px;
   height: 56px;
+  margin-left: auto;
 
-  font-size: 16px;
-  line-height: 26px;
   text-align: center;
   color: @white-color;
   letter-spacing: 0.04em;
 
-  background-color: #5a98d0;
+  background-color: @blue-background;
   border-radius: 10px;
 }
 
+.information {
+  display: flex;
+  margin-bottom: 44px;
+  padding: 0 calc(50% - 422px);
+}
 
 .contacts-list {
   display: flex;
   flex-direction: column;
 }
+
 .contacts-list__item {
   width: 299px;
-  margin-bottom: 24px;
-
-  font-size: 16px;
-  line-height: 26px;
+  margin-bottom: 22px;
   color: @white-color;
+
   a {
-    font-size: 16px;
-    line-height: 26px;
     color: @white-color;
   }
 }
 
+.information__contacts {
+  margin-top: 18px;
+  margin-right: 102px;
+}
+
+.information__general-data {
+  margin-right: 76px;
+}
+
+.contacts-list__address {
+  display: inline-block;
+  width: 238px;
+
+  font-style: normal;
+}
+
+.page-footer__logo {
+  margin-right: 14px;
+}
+
+.page-footer__name {
+  display: inline-block;
+  margin-bottom: 33px;
+
+  font-size: 28px;
+  line-height: 46px;
+  font-family: @font-regular;
+  vertical-align: top;
+}
+
+.contacts-list__letter {
+  margin-right: 18px;
+
+  &:first-of-type {
+    margin-right: 16px;
+
+    vertical-align: top;
+  }
+}
+
 .list-title {
+  margin-bottom: 30px;
+
   font-size: 20px;
   line-height: 30px;
   color: @white-color;
 }
-.company-info,
+
+.company-info-list,
 .social-list {
   display: flex;
   flex-direction: column;
 }
-.company-info__item,
+
+.company-info-list__item,
 .social-list__item {
   margin-bottom: 16px;
 }
-.company-info__link,
+
+.company-info-list__link,
 .social-list__link {
-  font-size: 16px;
-  line-height: 26px;
   color: @white-color;
+}
+
+.page-footer__rights {
+  padding: 0 calc(50% - 422px);
+  padding-bottom: 65px;
+
+  opacity: 0.4;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1319px) {
+  .vacancy {
+    flex-direction: column;
+    margin-bottom: 105px;
+    margin-left: 48px;
+    padding: 0 calc(50% - 384px);
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 391px;
+      right: 197px;
+
+      display: block;
+      width: 1073px;
+
+      border-bottom: 1px solid @white-color;
+    }
+  }
+
+  .vacancy__text {
+    order: 0;
+    margin-bottom: 40px;
+  }
+
+  .vacancy__button {
+    top: 0;
+    left: 0;
+
+    margin-left: 0;
+  }
+
+  .information {
+    align-items: center;
+    margin-left: 48px;
+    padding: 0 calc(50% - 384px);
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .information__contacts {
+    margin-right: 0;
+  }
+
+  .information__general-data {
+    margin-right: 76px;
+  }
+
+  .contacts-list__address {
+    display: inline-block;
+    width: 238px;
+
+    font-style: normal;
+  }
+
+  .page-footer__logo {
+    margin-right: 14px;
+  }
+
+  .page-footer__name {
+    display: inline-block;
+    margin-bottom: 33px;
+
+    font-size: 28px;
+    line-height: 46px;
+    font-family: @font-regular;
+    vertical-align: top;
+  }
+
+  .contacts-list__letter {
+    margin-right: 18px;
+
+    &:first-of-type {
+      margin-right: 16px;
+
+      vertical-align: top;
+    }
+  }
+
+  .list-title {
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    line-height: 30px;
+    color: @white-color;
+  }
+
+  .company-info-list,
+  .social-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .company-info-list__item,
+  .social-list__item {
+    margin-bottom: 16px;
+  }
+
+  .company-info-list__link,
+  .social-list__link {
+    font-size: 16px;
+    line-height: 26px;
+    color: @white-color;
+  }
+
+  .page-footer__rights {
+    margin-left: 48px;
+    padding: 0 calc(50% - 384px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .vacancy {
+    flex-direction: column;
+    margin-bottom: 105px;
+    margin-left: 24px;
+    padding: 0 calc(50% - 180px);
+
+    &::after {
+      top: 476px;
+      right: 57px;
+    }
+  }
+
+  .vacancy__title {
+    width: 223px;
+  }
+
+  .vacancy__text {
+    order: 0;
+    width: 265px;
+    margin-bottom: 40px;
+  }
+
+  .vacancy__button {
+    top: 0;
+    left: 0;
+
+    margin-left: 0;
+  }
+
+  .information {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 48px;
+    padding: 0 calc(50% - 180px);
+  }
+
+  .contacts-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contacts-list__item {
+    width: 299px;
+    margin-bottom: 22px;
+
+    font-size: 16px;
+    line-height: 26px;
+    color: @white-color;
+    a {
+      font-size: 16px;
+      line-height: 26px;
+      color: @white-color;
+    }
+  }
+
+  .information__contacts,
+  .information__general-data {
+    width: 265px;
+    margin-right: 0;
+  }
+
+  .information__social {
+    width: 265px;
+  }
+
+  .contacts-list__address {
+    display: inline-block;
+    width: 238px;
+
+    font-style: normal;
+  }
+
+  .page-footer__logo {
+    margin-right: 14px;
+  }
+
+  .page-footer__name {
+    display: inline-block;
+    margin-bottom: 33px;
+
+    font-size: 28px;
+    line-height: 46px;
+    font-family: @font-regular;
+    vertical-align: top;
+  }
+
+  .contacts-list__letter {
+    margin-right: 18px;
+    &:first-of-type {
+      margin-right: 16px;
+
+      vertical-align: top;
+    }
+  }
+
+  .list-title {
+    margin-bottom: 30px;
+
+    font-size: 20px;
+    line-height: 30px;
+    color: @white-color;
+  }
+
+  .company-info-list,
+  .social-list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .company-info-list__item,
+  .social-list__item {
+    margin-bottom: 16px;
+  }
+
+  .company-info-list__link,
+  .social-list__link {
+    font-size: 16px;
+    line-height: 26px;
+    color: @white-color;
+  }
+
+  .page-footer__rights {
+    margin-left: 48px;
+    padding: 0 calc(50% - 384px);
+  }
 }

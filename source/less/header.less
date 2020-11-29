@@ -3,12 +3,22 @@
   padding: 0 calc(50% - 600px);
   padding-top: 40px;
   align-items: center;
-  position: relative;
-  z-index: 20;;
 }
 
 .page-nav {
   margin-left: auto;
   position: relative;
-  z-index: 20;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1319px) {
+  .page-header {
+    padding: 0 calc(50% - 384px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .page-header {
+    padding: 0 calc(50% - 180px);
+  }
+}
+
