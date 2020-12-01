@@ -1,24 +1,27 @@
 .page-header {
   display: flex;
+  align-items: center;
   padding: 0 calc(50% - 600px);
   padding-top: 40px;
-  align-items: center;
 }
 
 .page-nav {
-  margin-left: auto;
   position: relative;
+
+  margin-left: auto;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1319px) {
+@media screen and (min-width: 767px) and (max-width: 1024px) {
   .page-header {
-    padding: 0 calc(50% - 384px);
+    padding: 0 calc(50% - 364px);
+    padding-top: 40px;
   }
 }
 
 @media screen and (max-width: 767px) {
   .page-header {
-    padding: 0 calc(50% - 180px);
+    margin-bottom: 40px;
+    padding: 0 calc(50% - 160px);
+    padding-top: 40px;
   }
 }
-

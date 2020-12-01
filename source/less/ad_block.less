@@ -3,38 +3,26 @@
   z-index: 10;
 
   padding: 0 calc(50% - 660px);
-  padding-bottom: 193px;
+  padding-bottom: 88px;
 
-  background: linear-gradient(to top, rgba(152, 195, 232, 0.2), #ffffff);
+  background: url("../img/illustration.svg") calc(50% + 315px) bottom / 688px 732px no-repeat,
+  linear-gradient(to top, @linear-bottom-color, @white-color);
 }
 
 .advert-block__wrap {
   position: relative;
 
-  padding: 0 calc(50% - 468px);
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: -40px;
-    left: 631px;
-
-    display: block;
-    width: 53%;
-    height: 624px;
-
-    background-image: url("../img/illustration.svg");
-    background-repeat: no-repeat;
-  }
+  padding: 101px calc(50% - 471px);
 }
 
 .advert-block__title {
-  width: 502px;
-  margin-bottom: 41px;
-  padding-top: 58px;
+  width: 506px;
+  margin-top: 0;
+  margin-bottom: 35px;
 
-  font-size: 50px;
-  line-height: 68px;
+  font-size: 54px;
+  line-height: 72px;
+  font-family: @font-ibarra;
   color: @blue-color;
   letter-spacing: 0.04em;
 }
@@ -60,26 +48,27 @@
 
   background-color: @blue-background;
   border-radius: 10px;
-  box-shadow: 5px 10px 20px rgba(53, 110, 173, 0.2);
+  box-shadow: 5px 10px 20px @shadow-color;
 }
 
-@media screen and (min-width: 768px) and (max-width: 1319px) {
+@media screen and (min-width: 1023px) and (max-width: 1300px) {
+  .advert-block {
+    background: url("../img/illustration.svg") calc(50% + 253px) bottom / 520px 732px no-repeat,
+    linear-gradient(to top, @linear-bottom-color, @white-color);
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
   .advert-block {
     padding: 0 calc(50% - 384px);
     padding-bottom: 218px;
+
+    background: url("../img/illustration.svg") calc(50% + 188px) bottom / 347px 362px no-repeat,
+    linear-gradient(to top, @linear-bottom-color, @white-color);
   }
 
   .advert-block__wrap {
     padding: 0 calc(50% - 255px);
-
-    &::before {
-      top: 135px;
-      left: 196px;
-
-      width: 92%;
-
-      transform: scale(0.6);
-    }
   }
 
   .advert-block__text {
@@ -90,27 +79,23 @@
 @media screen and (max-width: 767px) {
   .advert-block {
     padding: 0 calc(50% - 180px);
-    padding-bottom: 218px;
+    padding-bottom: 40px;
+
+    background: linear-gradient(to top, @linear-bottom-color, @white-color);
   }
 
   .advert-block__wrap {
     display: flex;
     flex-direction: column;
     padding: 0 calc(50% - 160px);
-
-    &::before {
-      display: none;
-      //       transform: scale(0.6);
-      // left: 196px;
-      // width: 92%;
-      // top: 135px;
-    }
   }
 
   .advert-block__title {
     width: 320px;
+    margin-bottom: 23px;
 
     font-size: 40px;
+    line-height: 50px;
   }
 
   .advert-block__text {
