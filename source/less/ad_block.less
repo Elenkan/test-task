@@ -3,16 +3,20 @@
   z-index: 10;
 
   padding: 0 calc(50% - 660px);
-  padding-bottom: 88px;
 
-  background: url("../img/illustration.svg") calc(50% + 315px) bottom / 688px 732px no-repeat,
-  linear-gradient(to top, @linear-bottom-color, @white-color);
+  background: linear-gradient(to top, @linear-bottom-color, @white-color);
 }
 
 .advert-block__wrap {
   position: relative;
 
-  padding: 101px calc(50% - 471px);
+ padding: 0 calc(50% - 471px);
+ padding-top: 101px;
+ padding-bottom: 189px;
+ background-image: url("../img/illustration.svg");
+ background-repeat: no-repeat;
+ background-position: calc(50% + 315px) top;
+ background-size: 688px 624px;
 }
 
 .advert-block__title {
@@ -52,23 +56,24 @@
 }
 
 @media screen and (min-width: 1023px) and (max-width: 1300px) {
-  .advert-block {
-    background: url("../img/illustration.svg") calc(50% + 253px) bottom / 520px 732px no-repeat,
-    linear-gradient(to top, @linear-bottom-color, @white-color);
+  .advert-block__wrap {
+    background-position: calc(50% + 267px) 50px;
+    background-size: 488px 424px;
   }
 }
+
 
 @media screen and (min-width: 767px) and (max-width: 1024px) {
   .advert-block {
     padding: 0 calc(50% - 384px);
-    padding-bottom: 218px;
-
-    background: url("../img/illustration.svg") calc(50% + 188px) bottom / 347px 362px no-repeat,
-    linear-gradient(to top, @linear-bottom-color, @white-color);
   }
 
   .advert-block__wrap {
     padding: 0 calc(50% - 255px);
+    padding-top: 101px;
+    padding-bottom: 189px;
+    background-size: 40%;
+    background-position: calc(50% + 219px) 344px;
   }
 
   .advert-block__text {
@@ -80,14 +85,13 @@
   .advert-block {
     padding: 0 calc(50% - 180px);
     padding-bottom: 40px;
-
-    background: linear-gradient(to top, @linear-bottom-color, @white-color);
   }
 
   .advert-block__wrap {
     display: flex;
     flex-direction: column;
     padding: 0 calc(50% - 160px);
+    background: none;
   }
 
   .advert-block__title {

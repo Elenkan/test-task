@@ -2,8 +2,9 @@
   "name": "test-task",
   "version": "1.0.0",
   "description": "",
-  "main": "index.html",
+  "main": "index.js",
   "scripts": {
+    "build": "gulp build",
     "start": "gulp start"
   },
   "repository": {
@@ -19,11 +20,21 @@
   "devDependencies": {
     "autoprefixer": "^10.0.2",
     "browser-sync": "^2.26.13",
+    "del": "^6.0.0",
     "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-less": "^4.0.1",
     "gulp-plumber": "^1.2.1",
     "gulp-postcss": "^9.0.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sourcemaps": "^3.0.0",
+    "imagemin-svgo": "^8.0.0",
     "postcss": "^8.1.9"
+  },
+  "dependencies": {
+    "check": "^1.0.0",
+    "g": "^2.0.1",
+    "updates": "^11.4.0"
   }
 }
