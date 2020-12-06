@@ -184,6 +184,30 @@
     <div class="page-footer__rights">2019 &#169; Afrianska. All rights reserved.
     </div>
   </footer>
+
+  <div class="modal-send hidden">
+    <h3 class="modal-send__title">Send us message</h3>
+    <form class="send-form" autocomplete="off">
+      <label for="send-form__user-name" class="send-form__label-name">Full Name</label>
+      <input class="send-form__input" id="send-form__user-name" type="text" name="user-name" placeholder="Your Name">
+      <label for="send-form__user-email" class="send-form__label-name">Email</label>
+      <input class="send-form__input" id="send-form__user-email" type="email" name="user-email" placeholder="Your Email">
+      <label for="send-form__user-message" class="send-form__label-name">Message</label>
+      <textarea class="send-form__input send-form__input--message" name="user-message" id="send-form__user-message" placeholder="Your Message"></textarea>
+      <button class="send-form__button" type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="popup-success hidden">
+    <button class="popup-success__close-button">Close</button>
+    <p class="popup-success__text">Your message successfully sent!</p>
+  </div>
+
+<script src="js/open-form.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/popup-close.js"></script>
+<script src="js/send-form.js"></script>
+
 </body>
 
 </html>

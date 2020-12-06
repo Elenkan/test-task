@@ -1,0 +1,155 @@
+.modal-send {
+  position: absolute;
+  top: 120px;
+  left: calc(50% - 270px);
+  z-index: 20;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 540px;
+  height: 800px;
+  padding-top: 33px;
+
+  background-color: @white-color;
+  border-radius: 10px;
+  box-shadow: 5px 10px 50px @service-shadow-color;
+
+  &__title {
+    align-self: flex-start;
+    margin-bottom: 48px;
+    margin-left: 56px;
+
+    font-size: 20px;
+    line-height: 30px;
+    font-family: @font-semibold;
+    color: @blue-color;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+}
+.send-form {
+  display: flex;
+  flex-direction: column;
+  width: 428px;
+
+  &__label-name {
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    line-height: 30px;
+    font-family: @font-regular;
+    color: @blue-color;
+    letter-spacing: 0.04em;
+  }
+
+  &__input {
+    width: 428px;
+    height: 72px;
+    margin-bottom: 31px;
+    padding-bottom: 4px;
+    padding-left: 34px;
+
+    border: 1px solid @border-input-color;
+    border-radius: 10px;
+
+    &--message {
+      width: 428px;
+      height: 144px;
+      margin-bottom: 71px;
+      padding-top: 19px;
+    }
+
+    &::-webkit-input-placeholder {
+      .placeholder();
+    }
+
+    &::-moz-placeholder {
+      .placeholder();
+      line-height: 60px;
+    }
+
+    &--message::-moz-placeholder {
+      line-height: 30px;
+    }
+
+    &:-moz-placeholder {
+      .placeholder();
+    }
+
+    &:-ms-input-placeholder {
+      .placeholder();
+    }
+
+    &:focus {
+      border: 1px solid @focus-color;
+      outline: none;
+    }
+
+    &:invalid {
+      border: 1px solid @error-color;
+    }
+  }
+
+  &__button {
+    width: 428px;
+    height: 72px;
+
+    font-size: 16px;
+    line-height: 26px;
+    font-family: @font-semibold;
+    color: @white-color;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+
+    background: @blue-background;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px @service-shadow-color;
+
+    &:focus {
+      border: 2px solid @focus-color;
+      outline: none;
+    }
+  }
+}
+
+.error {
+  border: 1px solid @error-color;
+}
+
+@media screen and (max-width: 767px) {
+  .modal-send {
+    left: calc(50% - 170px);
+
+    width: 340px;
+    height: 640px;
+    padding-top: 23px;
+
+    &__title {
+      margin-bottom: 28px;
+    }
+  }
+
+  .send-form {
+    width: 300px;
+
+    &__input {
+      width: 300px;
+      height: 52px;
+      margin-bottom: 21px;
+      padding-left: 24px;
+      &--message {
+        height: 94px;
+        margin-bottom: 41px;
+        padding-top: 8px;
+      }
+
+      &::-moz-placeholder {
+        line-height: 45px;
+      }
+    }
+    &__button {
+      width: 300px;
+    }
+  }
+}

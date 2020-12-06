@@ -1,5 +1,4 @@
 .clients {
-  .flex();
   position: relative;
 
   padding: 0 calc(50% - 470px);
@@ -8,7 +7,9 @@
 
   background-color: @blue-background;
   border-radius: 200px 0 0 0;
-  box-shadow: 0 917px 0 0 @blue-background, 0 678px 0 0 @blue-background;
+  box-shadow: 0 917px 0 0 @blue-background, 0 677px 0 0 @blue-background;
+
+  .flex();
 }
 
 .clients__title {
@@ -30,13 +31,14 @@
 }
 
 .clients-list {
-  .flex();
   position: relative;
 
   margin-top: 81px;
 
   font-family: @font-regular;
   text-align: center;
+
+  .flex();
 }
 
 .clients-list__item {
