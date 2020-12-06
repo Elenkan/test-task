@@ -17,6 +17,10 @@
       if (xhr.status > INFO_CODE && xhr.status < REDIRECTION_CODE) {
         window.openForm.modalSend.classList.add('hidden');
         window.popupClose.popup.classList.remove('hidden');
+        window.scroll({
+            top: 10,
+            behavior: 'smooth'
+          });
       }
     };
 
