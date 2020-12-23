@@ -1,9 +1,7 @@
 .clients {
   position: relative;
 
-  padding: 0 calc(50% - 470px);
-  padding-top: 65px;
-  padding-bottom: 125px;
+  padding: 65px calc(50% - 470px) 125px;
 
   background-color: @blue-background;
   border-radius: 200px 0 0 0;
@@ -68,6 +66,10 @@
   color: @white-color;
   text-transform: uppercase;
   letter-spacing: 0.02em;
+
+  &:hover {
+    color: @hover-link-color;
+  }
 }
 
 .clients__button {
@@ -79,13 +81,15 @@
   color: @white-color;
 
   background-color: @light-blue-background;
+
+  &:hover {
+    background: linear-gradient(to bottom, @hover-color, @light-blue-background);
+  }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1000px) {
   .clients {
-    padding: 0 calc(50% - 384px);
-    padding-top: 65px;
-    padding-bottom: 125px;
+     padding: 65px calc(50% - 384px) 125px;
   }
   .clients__title {
     width: 223px;
@@ -131,9 +135,7 @@
   .clients {
     flex-direction: column;
     align-items: center;
-    padding: 0 calc(50% - 180px);
-    padding-top: 0;
-    padding-bottom: 40px;
+    padding: 0px calc(50% - 180px) 40px;
 
     border-radius: 0;
 

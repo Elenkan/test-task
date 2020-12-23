@@ -1,7 +1,7 @@
 .services {
   position: relative;
 
-  margin-bottom: 114px;
+  margin-bottom: 113px;
   padding: 0 calc(50% - 470px);
 }
 .services__title {
@@ -27,31 +27,32 @@
   }
 }
 
+.services-list__item-wrap {
+  margin-top: -4px;
+}
+
 .services-list__img {
   width: 192px;
   height: 132px;
 }
 
 .services-list__img--internet {
-  margin-top: 48px;
-  margin-bottom: 36px;
-  margin-left: -62px;
+  margin: 48px 0px 36px -62px;
 }
 
 .services-list__img--home {
   position: relative;
-  bottom: 27px;
+  bottom: 22px;
   left: 5px;
 
   width: 257px;
   height: 207px;
-  margin-bottom: 3px;
+  margin-bottom: 7px;
 }
 
 .services-list__img--digital {
-  margin-top: 47px;
-  margin-bottom: 36px;
-  margin-left: -38px;
+  width: 168px;
+  margin: 47px 0px 36px -38px;
 }
 
 .services-list__item {
@@ -100,34 +101,43 @@
   font-family: @font-semibold;
   color: @blue-background;
   text-decoration: none;
-}
 
-.services-list__link::before {
-  content: "";
-  position: absolute;
-  top: 9px;
-  left: 109px;
+  &:hover {
+    color: @hover-link-color;
+  }
 
-  display: block;
-  width: 10px;
-  height: 10px;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 109px;
 
-  border: 2px solid @blue-background;
-  border-top: none;
-  border-left: none;
-  transform: rotate(-45deg);
-}
-.services-list__link::after {
-  content: "";
-  position: absolute;
-  bottom: 14px;
-  left: 104px;
+    display: block;
+    width: 10px;
+    height: 10px;
 
-  display: block;
-  width: 15px;
-  height: 10px;
+    border: 2px solid @blue-background;
+    border-top: none;
+    border-left: none;
+    transform: rotate(-45deg);
+  }
 
-  border-bottom: 2px solid @blue-background;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 14px;
+    left: 104px;
+
+    display: block;
+    width: 15px;
+    height: 10px;
+
+    border-bottom: 2px solid @blue-background;
+  }
+    &:hover::before,
+    &:hover::after {
+    border-color: @hover-link-color;
+  }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1023px) {
@@ -144,7 +154,6 @@
     width: 768px;
     margin-left: 0;
     padding: 0 calc(50% - 358px);
-    padding-top: 0;
   }
 
   .services-list__item {
@@ -153,9 +162,7 @@
   }
 
   .services-list__img--internet {
-    margin-top: 48px;
-    margin-bottom: 36px;
-    margin-left: -62px;
+    margin-top: 48px 0px 36px -62px;
   }
 }
 
@@ -184,8 +191,7 @@
     align-items: center;
     width: 340px;
     margin-left: 0;
-    padding: 0 calc(50% - 180px);
-    padding-top: 105px;
+    padding: 105px calc(50% - 180px) 0px;
 
     & > article {
       margin-bottom: 40px;

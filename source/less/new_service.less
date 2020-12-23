@@ -1,0 +1,117 @@
+.new-service {
+  position: relative;
+  z-index: 10;
+
+  padding: 0 calc(50% - 660px);
+
+  background: linear-gradient(to top, @linear-bottom-color, @white-color);
+
+  &__wrap {
+    position: relative;
+
+    padding: 101px calc(50% - 471px) 189px;
+
+    background: url("../img/illustration.svg") calc(50% + 315px) top / 688px 624px no-repeat;
+  }
+
+  &__title {
+    width: 506px;
+    margin-top: 0;
+    margin-bottom: 35px;
+
+    font-size: 54px;
+    line-height: 72px;
+    font-family: @font-ibarra;
+    color: @blue-color;
+    letter-spacing: 0.04em;
+  }
+
+  &__text {
+    width: 425px;
+    margin-bottom: 77px;
+
+    font-size: 16px;
+    line-height: 26px;
+    color: @blue-color;
+
+    opacity: 0.6;
+  }
+
+  &__button {
+    width: 220px;
+    height: 56px;
+
+    font-family: @font-regular;
+    color: @white-color;
+    letter-spacing: 0.04em;
+
+    background-color: @blue-background;
+    border-radius: 10px;
+    box-shadow: 5px 10px 20px @shadow-color;
+
+    &:hover {
+      background: linear-gradient(to bottom, @hover-color, @blue-background);
+    }
+  }
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1300px) {
+  .new-service__wrap {
+    background-position: calc(50% + 267px) 50px;
+    background-size: 488px 424px;
+  }
+}
+
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  .new-service {
+    padding: 0 calc(50% - 384px);
+
+    &__wrap {
+      padding: 101px calc(50% - 255px) 189px;
+
+      background-position: calc(50% + 219px) 344px;
+      background-size: 40%;
+    }
+
+
+    &__text {
+      margin-bottom: 54px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .new-service {
+    padding: 0px calc(50% - 180px) 40px;
+
+    &__wrap {
+      display: flex;
+      flex-direction: column;
+      padding: 0 calc(50% - 160px);
+
+      background: none;
+    }
+
+    &__title {
+      width: 320px;
+      margin-bottom: 23px;
+
+      font-size: 40px;
+      line-height: 50px;
+    }
+
+    &__text {
+      width: 320px;
+    }
+
+    &__button {
+      align-self: center;
+    }
+
+    &__text {
+      margin-bottom: 54px;
+    }
+  }
+}
+

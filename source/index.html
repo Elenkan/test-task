@@ -13,7 +13,9 @@
     <img class="site-logo" src="img/logo.svg" alt="Company's logo" width="48" height="32">
     <nav class="page-nav">
       <button class="page-nav__button" type="button">
-        <img class="page-nav__img" src="img/burger-button.svg" alt="Menu icon" width="24" height="16">
+        <svg class="page-nav__img" width="24" height="16" viewBox="0 0 24 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 16H24V13.3333H0V16ZM0 9.33333H24V6.66667H0V9.33333ZM0 0V2.66667H24V0H0Z" fill="#356EAD" />
+        </svg>
       </button>
       <ul class="site-list">
         <li class="site-list_item"><a href="#"></a></li>
@@ -23,11 +25,11 @@
     </nav>
   </header>
   <main>
-    <section class="advert-block">
-      <div class="advert-block__wrap">
-        <h2 class="advert-block__title">New Automation Tool for Your Home</h2>
-        <p class="advert-block__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.</p>
-        <button class="advert-block__button">See Our Project</button>
+    <section class="new-service">
+      <div class="new-service__wrap">
+        <h2 class="new-service__title">New Automation Tool for Your Home</h2>
+        <p class="new-service__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Faucibus tristique vulputate ultrices ut mauris tellus at. Posuere sollicitudin odio tellus elit.</p>
+        <button class="new-service__button">See Our Project</button>
       </div>
     </section>
     <section class="company-project hidden">
@@ -184,30 +186,35 @@
     <div class="page-footer__rights">2019 &#169; Afrianska. All rights reserved.
     </div>
   </footer>
-
-  <div class="modal-send hidden">
-    <h3 class="modal-send__title">Send us message</h3>
-    <form class="send-form" autocomplete="off">
-      <label for="send-form__user-name" class="send-form__label-name">Full Name</label>
-      <input class="send-form__input" id="send-form__user-name" type="text" name="user-name" placeholder="Your Name">
-      <label for="send-form__user-email" class="send-form__label-name">Email</label>
-      <input class="send-form__input" id="send-form__user-email" type="email" name="user-email" placeholder="Your Email">
-      <label for="send-form__user-message" class="send-form__label-name">Message</label>
-      <textarea class="send-form__input send-form__input--message" name="user-message" id="send-form__user-message" placeholder="Your Message"></textarea>
-      <button class="send-form__button" type="submit">Submit</button>
-    </form>
+  <div class="overlay-modal hidden js-close"></div>
+  <div class="modal-wrapper hidden">
+    <div class="modal-send">
+      <h3 class="modal-send__title">Send us message</h3>
+      <button class="modal-send__close-button js-close">
+        <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#1F3F68" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"></path>
+        </svg>
+      </button>
+      <form class="send-form" autocomplete="off">
+        <label for="send-form__user-name" class="send-form__label-name">Full Name</label>
+        <input class="send-form__input" id="send-form__user-name" type="text" name="user-name" placeholder="Your Name" data-name="inputName">
+        <label for="send-form__user-email" class="send-form__label-name">Email</label>
+        <input class="send-form__input" id="send-form__user-email" type="email" name="user-email" placeholder="Your Email" data-name="inputEmail">
+        <label for="send-form__user-message" class="send-form__label-name">Message</label>
+        <textarea class="send-form__input send-form__input--message" name="user-message" id="send-form__user-message" placeholder="Your Message"></textarea>
+        <button class="send-form__button" type="submit">Submit</button>
+      </form>
+    </div>
   </div>
-
   <div class="popup-success hidden">
-    <button class="popup-success__close-button">Close</button>
+    <button class="popup-success__close-button js-close">
+      <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#1F3F68" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"></path>
+      </svg>
+    </button>
     <p class="popup-success__text">Your message successfully sent!</p>
   </div>
-
-<script src="js/open-form.js"></script>
-<script src="js/validation.js"></script>
-<script src="js/popup-close.js"></script>
-<script src="js/send-form.js"></script>
-
+  <script src="js/bundle.min.js"></script>
 </body>
 
 </html>
