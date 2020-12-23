@@ -16,10 +16,6 @@ const sendForm = function() {
     if (xhr.status > INFO_CODE && xhr.status < REDIRECTION_CODE) {
       modal.classList.add('hidden');
       popupSuccess.classList.remove('hidden');
-      window.scrollTo({
-        top: 10,
-        behavior: 'smooth'
-      });
     }
   };
 
