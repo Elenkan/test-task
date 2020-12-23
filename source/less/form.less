@@ -148,9 +148,9 @@
 }
 
 @media screen and (max-width: 767px) {
-
   .modal-wrapper {
     left: calc(50% - 170px);
+
     width: 340px;
     overflow-y: scroll;
   }
@@ -161,8 +161,8 @@
     padding-top: 23px;
 
     &__title {
-      margin-left: 20px;
       margin-bottom: 28px;
+      margin-left: 20px;
     }
   }
 
@@ -184,9 +184,13 @@
       &::-moz-placeholder {
         line-height: 45px;
       }
+      &--message::-moz-placeholder {
+        line-height: 22px;
+      }
     }
     &__button {
       width: 280px;
     }
   }
 }
+
