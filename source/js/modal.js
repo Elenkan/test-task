@@ -6,16 +6,20 @@ const modal = document.querySelector('.modal-wrapper');
 const userName = document.querySelector('#send-form__user-name');
 const closeElements = Array.from(document.querySelectorAll('.js-close'));
 const popupSuccess = document.querySelector('.popup-success');
+const scrolledElement = (el) => {
+  el.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+};
 
 buttonVacancy.addEventListener('click', () => {
   modalOverlay.classList.remove('hidden');
   modal.classList.remove('hidden');
   body.classList.add('body-remove-scroll');
   userName.focus();
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
+  scrolledElement(modal);
+  scrolledElement(window);
 });
 
 

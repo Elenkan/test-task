@@ -14,6 +14,7 @@ const sendForm = function() {
 
   xhr.onload = () => {
     if (xhr.status > INFO_CODE && xhr.status < REDIRECTION_CODE) {
+      modalForm.reset();
       modal.classList.add('hidden');
       popupSuccess.classList.remove('hidden');
     }
