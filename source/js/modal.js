@@ -18,8 +18,8 @@ buttonVacancy.addEventListener('click', () => {
   modal.classList.remove('hidden');
   body.classList.add('body-remove-scroll');
   userName.focus();
-  scrolledElement(modal);
   scrolledElement(window);
+  scrolledElement(modal);
 });
 
 
